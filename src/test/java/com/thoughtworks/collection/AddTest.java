@@ -55,15 +55,15 @@ public class AddTest {
         assertThat(add.getTripleOfOddAndAddTwo(arrayList)).isEqualTo(resultList);
     }
 
-//    @Test
-//    public void should_get_sum_of_processed_odd() {
-//        //Find the sum of 3 times plus 5 of the odd elements in the array
-//        Integer[] array = new Integer[]{1, 5, 7, 12, 11, 35, 54, 67, 70};
-//        List<Integer> arrayList = Arrays.asList(array);
-//        Add add = new Add();
-//
-//        assertThat(add.getSumOfProcessedOdds(arrayList)).isEqualTo(408);
-//    }
+    @Test
+    public void should_get_sum_of_processed_odd() {
+        //Find the sum of 3 times plus 5 of the odd elements in the array
+        Integer[] array = new Integer[]{1, 5, 7, 12, 11, 35, 54, 67, 70};
+        List<Integer> arrayList = Arrays.asList(array);
+        Add add = new Add();
+
+        assertThat(add.getSumOfProcessedOdds(arrayList)).isEqualTo(408);
+    }
 
 //    @Test
 //    public void should_process_elements() {

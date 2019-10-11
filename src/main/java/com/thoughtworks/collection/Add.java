@@ -2,7 +2,9 @@ package com.thoughtworks.collection;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Add {
     public int getSumOfEvens(int leftBorder, int rightBorder) {
@@ -43,11 +45,23 @@ public class Add {
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
-        //
+        List<Integer> finalList = new ArrayList<>();
+
+        arrayList.stream().forEach(x ->{
+                if (x % 2 == 0){
+                    finalList.add(x);
+                }
+                else{
+                    finalList.add((x * 3) + 2);
+                }
+            }
+        );
+
+        return finalList;
     }
 
     public int getSumOfProcessedOdds(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        return arrayList.stream().filter(n -> (n % 2 != 0)).map(n -> ((n * 3)+5)).reduce((x,y) -> x+y).get();
     }
 
 //    public double getMedianOfEven(List<Integer> arrayList) {
