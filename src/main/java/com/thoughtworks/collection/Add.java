@@ -6,11 +6,36 @@ import java.util.List;
 
 public class Add {
     public int getSumOfEvens(int leftBorder, int rightBorder) {
-        throw new NotImplementedException();
+
+        int answer = 0;
+        int smallerNumber = Math.min(leftBorder, rightBorder);
+        int biggerNumber = Math.max(leftBorder,rightBorder);
+
+
+        for (int x=smallerNumber; x<=biggerNumber; x++){
+            if (x % 2 == 0){
+                answer += x;
+            }
+        }
+
+        return answer;
+
     }
 
     public int getSumOfOdds(int leftBorder, int rightBorder) {
-        throw new NotImplementedException();
+        int answer = 0;
+        int smallerNumber = Math.min(leftBorder, rightBorder);
+        int biggerNumber = Math.max(leftBorder,rightBorder);
+
+
+        for (int x=smallerNumber; x<=biggerNumber; x++){
+            if (x % 2 != 0){
+                answer += x;
+            }
+        }
+
+        return answer;
+
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
