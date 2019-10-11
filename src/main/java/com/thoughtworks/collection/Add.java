@@ -39,11 +39,11 @@ public class Add {
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        return arrayList.stream().map(n -> (n * 3) + 2).reduce((x,y) -> x+y).get();
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        //
     }
 
     public int getSumOfProcessedOdds(List<Integer> arrayList) {
