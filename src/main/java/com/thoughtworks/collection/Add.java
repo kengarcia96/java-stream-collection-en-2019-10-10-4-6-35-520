@@ -61,12 +61,12 @@ public class Add {
     }
 
     public int getSumOfProcessedOdds(List<Integer> arrayList) {
-        return arrayList.stream().filter(n -> (n % 2 != 0)).map(n -> ((n * 3)+5)).reduce((x,y) -> x+y).get();
+        return arrayList.stream().filter(n -> (n % 2 != 0)).map(n -> ((n * 3) + 5)).reduce((x,y) -> x+y).get();
     }
 
-//    public double getMedianOfEven(List<Integer> arrayList) {
-//        throw new NotImplementedException();
-//    }
+    public double getMedianOfEven(List<Integer> arrayList) {
+        throw new NotImplementedException();
+    }
 
     public double getAverageOfEven(List<Integer> arrayList) {
         throw new NotImplementedException();

@@ -69,7 +69,7 @@ public class AddTest {
 //    public void should_process_elements() {
 //        // Array of 3 times the sum of the previous element and the next element in the array
 //        Integer[] array = new Integer[]{1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21};
-//        List<Integer> arrayList = Arrays.asList(array);
+//        List<Integer> arrayLigetMedianOfEvenst = Arrays.asList(array);
 //
 //        Add add = new Add();
 //
@@ -79,15 +79,15 @@ public class AddTest {
 //        assertThat(add.getProcessedList(arrayList)).isEqualTo(resultList);
 //    }
 
-//    @Test
-//    public void should_return_median_of_even() {
-//        //Find the median of an array of all even numbers in the array
-//        Integer[] array = new Integer[]{1, 2, 3, 4, 5};
-//        List<Integer> arrayList = Arrays.asList(array);
-//
-//        Add add = new Add();
-//        assertThat(add.getMedianOfEven(arrayList)).isEqualTo((double) 3);
-//    }
+    @Test
+    public void should_return_median_of_even() {
+        //Find the median of an array of all even numbers in the array
+        Integer[] array = new Integer[]{1, 2, 3, 4, 5};
+        List<Integer> arrayList = Arrays.asList(array);
+
+        Add add = new Add();
+        assertThat(add.getMedianOfEven(arrayList)).isEqualTo((double) 3);
+    }
 
     @Test
     public void should_return_average_of_even() {
