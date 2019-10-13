@@ -3,8 +3,10 @@ package com.thoughtworks.collection;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CollectionOperator {
     public List<Integer> getListByInterval(int left, int right) {
@@ -44,11 +46,11 @@ public class CollectionOperator {
     }
 
     public List<Integer> popEvenElments(int[] array) {
-        throw new NotImplementedException();
+        return Arrays.stream(array).filter(n -> n % 2 == 0).boxed().collect(Collectors.toList());
     }
 
     public int popLastElment(int[] array) {
-        throw new NotImplementedException();
+        return Arrays.stream(array).reduce((x,y) -> y).getAsInt();
     }
 
     public List<Integer> popCommonElement(int[] firstArray, int[] secondArray) {
