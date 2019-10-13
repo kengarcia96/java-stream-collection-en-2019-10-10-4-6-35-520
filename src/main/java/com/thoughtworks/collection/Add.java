@@ -3,6 +3,7 @@ package com.thoughtworks.collection;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -80,9 +81,19 @@ public class Add {
         return arrayList.stream().filter(n -> n % 2 == 0).distinct().collect(Collectors.toList());
     }
 
-//    public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
-//        throw new NotImplementedException();
-//    }
+    public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
+        List<Integer> evenList = new ArrayList<>();
+        List<Integer> oddList = new ArrayList<>();
+        List<Integer> finalList = new ArrayList<>();
+
+        evenList = arrayList.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
+        oddList = arrayList.stream().filter(n -> n % 2 != 0).sorted(Collections.reverseOrder()).collect(Collectors.toList());
+
+        finalList.addAll(evenList);
+        finalList.addAll(oddList);
+
+        return finalList;
+    }
 
 //    public List<Integer> getProcessedList(List<Integer> arrayList) {
 //        throw new NotImplementedException();
