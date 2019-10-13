@@ -65,15 +65,15 @@ public class Add {
     }
 
     public double getMedianOfEven(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        return arrayList.stream().sorted().filter(n -> (n % 2 == 0)).reduce((x,y) -> (x+y) / 2).get();
     }
 
     public double getAverageOfEven(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        return arrayList.stream().filter(n -> (n % 2 == 0)).reduce((x,y) -> (x+y) / 2).get();
     }
 
     public boolean isIncludedInEvenIndex(List<Integer> arrayList, Integer specialElment) {
-        throw new NotImplementedException();
+        return arrayList.stream().filter(n -> n % 2 == 0).anyMatch(n -> n.equals(specialElment));
     }
 
     public List<Integer> getUnrepeatedFromEvenIndex(List<Integer> arrayList) {
